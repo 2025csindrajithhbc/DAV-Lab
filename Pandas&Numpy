@@ -1,0 +1,49 @@
+import pandas as pd
+import numpy as np
+arr = np.array([10,20,30,40,50])
+print("array : ",arr)
+print("Mean :",arr.mean())
+print("Reshaped 2D:\n",arr.reshape(5,1))
+print("Slice (index 1 to 3:",arr[1:4])
+
+data = { "Name":['Asha','Ravi','meara','Karan'],
+         "Marks":[88,72,91,85],
+         "Branch":['CSE','ECE','CSE','ISE']}
+df = pd.DataFrame(data)
+print(df)
+print("\nFist 2 row:\n",df.iloc[0:2])
+print("\nMarks column:\n",df['Marks'])
+print("\nRows where Marks > 70:\n",df[df['Marks']>70])
+array :  [10 20 30 40 50]
+Mean : 30.0
+Reshaped 2D:
+ [[10]
+ [20]
+ [30]
+ [40]
+ [50]]
+Slice (index 1 to 3: [20 30 40]
+    Name  Marks Branch
+0   Asha     88    CSE
+1   Ravi     72    ECE
+2  meara     91    CSE
+3  Karan     85    ISE
+
+Fist 2 row:
+    Name  Marks Branch
+0  Asha     88    CSE
+1  Ravi     72    ECE
+
+Marks column:
+ 0    88
+1    72
+2    91
+3    85
+Name: Marks, dtype: int64
+
+Rows where Marks > 70:
+     Name  Marks Branch
+0   Asha     88    CSE
+1   Ravi     72    ECE
+2  meara     91    CSE
+3  Karan     85    ISE
